@@ -570,9 +570,9 @@ if (MSVC)
     target_link_options(openvpn PRIVATE /MANIFEST:NO)
 endif()
 
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    target_link_libraries(openvpn PUBLIC -ldl)
-endif ()
+# if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+#     target_link_libraries(openvpn PUBLIC -ldl)
+# endif ()
 
 if (NOT WIN32)
     target_compile_options(openvpn PRIVATE -DPLUGIN_LIBDIR=\"${PLUGIN_DIR}\")

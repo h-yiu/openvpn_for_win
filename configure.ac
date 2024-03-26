@@ -36,6 +36,8 @@ AC_DEFINE([OPENVPN_VERSION_MAJOR], [PRODUCT_VERSION_MAJOR], [OpenVPN major versi
 AC_DEFINE([OPENVPN_VERSION_MINOR], [PRODUCT_VERSION_MINOR], [OpenVPN minor version - integer])
 AC_DEFINE([OPENVPN_VERSION_PATCH], ["PRODUCT_VERSION_PATCH"], [OpenVPN patch level - may be a string or integer])
 
+AC_USE_SYSTEM_EXTENSIONS
+
 AC_CONFIG_AUX_DIR([.])
 AC_CONFIG_HEADERS([config.h include/openvpn-plugin.h])
 AC_CONFIG_SRCDIR([src/openvpn/syshead.h])
@@ -58,7 +60,7 @@ m4_define([subdir_objects], [
 AM_INIT_AUTOMAKE(foreign subdir_objects 1.9) dnl NB: Do not [quote] this parameter.
 AM_SILENT_RULES([yes])
 AC_CANONICAL_HOST
-AC_USE_SYSTEM_EXTENSIONS
+# AC_USE_SYSTEM_EXTENSIONS
 
 AC_ARG_ENABLE(
 	[lzo],

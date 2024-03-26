@@ -26,7 +26,7 @@
 
 #ifdef _WIN32
 #include <winioctl.h>
-#include <tap-windows.h>
+#include "tap-windows.h"
 #include <setupapi.h>
 #include <cfgmgr32.h>
 #endif
